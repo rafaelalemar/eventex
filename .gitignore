@@ -10,5 +10,5 @@ Scripts
 *.pyc
 *~
 *.sqlite3
-.DS_Store
 .idea
+.DS_Store
