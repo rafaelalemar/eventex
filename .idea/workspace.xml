@@ -28,7 +28,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="84" column="41" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.0" vertical-offset="922" max-vertical-offset="1380">
               <folding>
-                <element signature="e#318#340#0" expanded="true" />
+                <marker date="1400594064352" expanded="true" signature="318:366" placeholder="import ..." />
               </folding>
             </state>
           </provider>
@@ -55,7 +55,16 @@
       <file leaf-file-name="requirements.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/requirements.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="2" selection-start="52" selection-end="52" vertical-scroll-proportion="0.10688836" vertical-offset="0" max-vertical-offset="421">
+            <state line="3" column="16" selection-start="66" selection-end="66" vertical-scroll-proportion="0.10688836" vertical-offset="0" max-vertical-offset="421">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="5" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
               <folding />
             </state>
           </provider>
@@ -96,7 +105,9 @@
         <entry file="file://$PROJECT_DIR$/core/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="4" column="39" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-              <folding />
+              <folding>
+                <marker date="1400593585320" expanded="true" signature="71:112" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,6 +130,7 @@
         <option value="$PROJECT_DIR$/eventex/settings.py" />
         <option value="$PROJECT_DIR$/eventex/wsgi.py" />
         <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
@@ -499,7 +511,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="9" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
           <folding>
-            <element signature="e#318#340#0" expanded="true" />
+            <marker date="1400594064352" expanded="true" signature="318:366" placeholder="import ..." />
           </folding>
         </state>
       </provider>
@@ -541,7 +553,9 @@
     <entry file="file://$PROJECT_DIR$/core/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="39" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <folding />
+          <folding>
+            <marker date="1400593585320" expanded="true" signature="71:112" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -549,7 +563,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="41" selection-start="2113" selection-end="2113" vertical-scroll-proportion="0.0" vertical-offset="922" max-vertical-offset="1380">
           <folding>
-            <element signature="e#318#340#0" expanded="true" />
+            <marker date="1400594064352" expanded="true" signature="318:366" placeholder="import ..." />
           </folding>
         </state>
       </provider>
@@ -568,9 +582,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="5" selection-start="88" selection-end="88" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="2" selection-start="52" selection-end="52" vertical-scroll-proportion="0.10688836" vertical-offset="0" max-vertical-offset="180">
+        <state line="3" column="16" selection-start="66" selection-end="66" vertical-scroll-proportion="0.10688836" vertical-offset="0" max-vertical-offset="421">
           <folding />
         </state>
       </provider>
