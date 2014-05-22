@@ -34,6 +34,10 @@ body {
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+
+  background-image: url("../img/rio_cristo.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -131,25 +135,35 @@ body {
  */
 
 @media (min-width: 768px) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  /* Start the vertical centering */
-  .site-wrapper-inner {
+    /* Pull out the header and footer */
+    .masthead {
+        position: fixed;
+        top: 0;
+    }
+    .mastfoot {
+        position: fixed;
+        bottom: 0;
+    }
+
+    /* Start the vertical centering */
+    .site-wrapper-inner {
     vertical-align: middle;
-  }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
+    }
+
+    /* Handle the widths */
+    .masthead,
+    .mastfoot,
+
+    .cover-container {
+        width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+
+}
+
+@media (max-width: 768px){
+    body{
+        background-size: 40%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -158,4 +172,14 @@ body {
   .cover-container {
     width: 700px;
   }
+
+    body{
+        background-size: 50%;
+    }
+}
+
+@media (max-width: 500px){
+    body{
+        background-image: none;
+    }
 }
