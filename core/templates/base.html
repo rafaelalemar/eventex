@@ -23,12 +23,14 @@
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="/">Home</a></li>
                 <li><a href="mailto:eventex@email.com">Contato</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </div>
+
+        {% bootstrap_messages %}
 
         {% block content %}
         {% endblock %}

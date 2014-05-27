@@ -5,5 +5,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'core.views.home', name='home'),
+    url(r'^inscricao/$', 'subscriptions.views.subscribe', name='subscribe'),
     url(r'^admin/', include(admin.site.urls)),
 )
