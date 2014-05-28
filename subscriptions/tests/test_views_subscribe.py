@@ -31,7 +31,14 @@ class SubscribeTest(TestCase):
         form = self.resp.context['form']
         self.assertIsInstance(form, SubscriptionForm)
 
-    def test_form_has_fields(self):
-        'Form must have 4 fields.'
-        form = self.resp.context['form']
-        self.assertItemsEqual(['name', 'email', 'cpf', 'phone'], form.fields)
+
+
+class SubscribePostTest(TestCase):
+
+    def setUp(self):
+        data = dict(name="Rafael Vidal", cpf="80100011187",  email="rafaelalemar@gmail.com", phone="47-91943004")
+        self.resp = self.client.post('/inscricao/', data)
+
+    def test_post(self):
+        'Valid POST should redirect to /inscricao/1/'
+        self.assertEqual(302, self.resp.status_code)
