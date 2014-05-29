@@ -48,4 +48,4 @@ class SubscriptionUniqueTest(TestCase):
             email="outro@email.com",
             phone="47-91943004"
         )
-        #self.assertRaises(IntegrityError, s.save())
+        # self.assertRaises(IntegrityError, s.save())

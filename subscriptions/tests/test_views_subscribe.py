@@ -1,5 +1,7 @@
 from django.test import TestCase
 from subscriptions.forms import SubscriptionForm
+from subscriptions.models import Subscription, Ricardo_ALemar
+
 
 class SubscribeTest(TestCase):
 
@@ -42,3 +44,31 @@ class SubscribePostTest(TestCase):
     def test_post(self):
         'Valid POST should redirect to /inscricao/1/'
         self.assertEqual(302, self.resp.status_code)
+
+    def test_save(self):
+        'Valid POST must be saved'
+        self.assertTrue(Subscription.objects.exists())
+
+
+class SubscribeInvalidPostTest(TestCase):
+
+    def setUp(self):
+        data = dict(
+            name="Rafael Vidal",
+            cpf="000000000012",
+            email="outro@email.com",
+            phone="47-91943004"
+        )
+        self.resp = self.client.post('/inscricao/', data)
+
+    def test_post(self):
+        'Invalid POST should not redirect'
+        self.assertEqual(200, self.resp.status_code)
+
+    def test_form_erros(self):
+        'Form must contain errors'
+        self.assertTrue(self.resp.context['form'].errors)
+
+    def test_dont_save(self):
+        'Do not save data'
+        self.assertFalse(Subscription.objects.exists())

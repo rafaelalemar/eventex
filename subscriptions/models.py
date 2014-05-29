@@ -17,3 +17,9 @@ class Subscription(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class Ricardo_ALemar(models.Model):
+
+    def minha_idade(self):
+        print "65"
