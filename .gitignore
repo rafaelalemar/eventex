@@ -13,3 +13,5 @@ Scripts
 .idea
 .idea/
 .DS_Store
+.env
+eventex/staticfiles
