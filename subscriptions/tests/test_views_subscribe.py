@@ -1,12 +1,13 @@
 from django.test import TestCase
 from subscriptions.forms import SubscriptionForm
-from subscriptions.models import Subscription, Ricardo_ALemar
+from subscriptions.models import Subscription
+from django.core.urlresolvers import reverse as r
 
 
 class SubscribeTest(TestCase):
 
     def setUp(self):
-        self.resp = self.client.get('/inscricao/')
+        self.resp = self.client.get(r('subscriptions:subscribe'))
 
 
     def test_get(self):
@@ -39,7 +40,7 @@ class SubscribePostTest(TestCase):
 
     def setUp(self):
         data = dict(name="Rafael Vidal", cpf="80100011187",  email="rafaelalemar@gmail.com", phone="47-91943004")
-        self.resp = self.client.post('/inscricao/', data)
+        self.resp = self.client.post(r('subscriptions:subscribe'), data)
 
     def test_post(self):
         'Valid POST should redirect to /inscricao/1/'
@@ -59,7 +60,7 @@ class SubscribeInvalidPostTest(TestCase):
             email="outro@email.com",
             phone="47-91943004"
         )
-        self.resp = self.client.post('/inscricao/', data)
+        self.resp = self.client.post(r('subscriptions:subscribe'), data)
 
     def test_post(self):
         'Invalid POST should not redirect'

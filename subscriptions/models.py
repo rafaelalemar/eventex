@@ -9,6 +9,7 @@ class Subscription(models.Model):
     email = models.EmailField(_('email'), unique=True)
     phone = models.CharField(_('telefone'), max_length=20, blank=True)
     created_at = models.DateTimeField(_('criado em'), auto_now_add=True)
+    paid = models.BooleanField(_('Pago'), default=False)
 
     class Meta:
         ordering = ['created_at']
@@ -17,9 +18,3 @@ class Subscription(models.Model):
 
     def __unicode__(self):
         return self.name
-
-
-class Ricardo_ALemar(models.Model):
-
-    def minha_idade(self):
-        print "65"
