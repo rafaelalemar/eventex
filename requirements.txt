@@ -6,5 +6,6 @@ gunicorn==18.0
 django-bootstrap3==4.6.0
 python-decouple==2.2
 psycopg2==2.5.3
-pytz==2014.4
+pytz
 south==0.8.4
+mock==1.0.1
