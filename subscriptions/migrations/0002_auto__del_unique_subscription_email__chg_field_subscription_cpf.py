@@ -12,10 +12,16 @@ class Migration(SchemaMigration):
         db.delete_unique(u'subscriptions_subscription', ['email'])
 
 
+        # Changing field 'Subscription.cpf'
+        db.alter_column(u'subscriptions_subscription', 'cpf', self.gf('django.db.models.fields.CharField')(unique=True, max_length=14))
+
     def backwards(self, orm):
         # Adding unique constraint on 'Subscription', fields ['email']
         db.create_unique(u'subscriptions_subscription', ['email'])
 
+
+        # Changing field 'Subscription.cpf'
+        db.alter_column(u'subscriptions_subscription', 'cpf', self.gf('django.db.models.fields.CharField')(max_length=11, unique=True))
 
     models = {
         u'subscriptions.subscription': {
