@@ -4,7 +4,7 @@ from subscriptions.forms import SubscriptionForm
 
 class SubscriptionFormTest(TestCase):
         def make_validated_form(self, **kwargs):
-            data = dict(name='Rafael Vidal', email="rafaelalemar@gmail.com", cpf='12345678901', phone="05163201254")
+            data = dict(name='Rafael Vidal', email="rafaelalemar@gmail.com", cpf='134.176.861-99', phone="05163201254")
             data.update(kwargs)
             form = SubscriptionForm(data)
             form.is_valid()
@@ -26,3 +26,8 @@ class SubscriptionFormTest(TestCase):
             form = self.make_validated_form(cpf="1234")
             
             self.assertItemsEqual(['cpf'], form.errors)
+
+        def test_email_is_optimal(self):
+            'Email is optimal'
+            form = self.make_validated_form(email='')
+            self.assertFalse(form.errors)

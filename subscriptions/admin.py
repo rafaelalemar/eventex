@@ -4,9 +4,13 @@ from django.utils.timezone import now
 from django.utils.translation import ungettext, ugettext as _
 from django.contrib import admin
 from subscriptions.models import Subscription
+from subscriptions.forms import SubscriptionForm
+from localflavor.br.forms import BRCPFField
 
 
 class SubscriptionAdmin(admin.ModelAdmin):
+    form = SubscriptionForm
+
     list_display = ('name', 'email', 'cpf', 'phone', 'created_at', 'subscribed_today', 'paid')
     date_hierarchy = 'created_at'
     search_fields = ('name', 'email', 'cpf', 'phone', 'created_at')
@@ -28,9 +32,11 @@ class SubscriptionAdmin(admin.ModelAdmin):
     def subscribed_today(self, obj):
         return obj.created_at.date() == now().date()
 
+
     mark_as_paid.short_description = _(u'Marcar como pago')
     subscribed_today.short_description = _(u'Inscrito hoje?')
     subscribed_today.boolean = True
+
 
 
 # Register your models here.

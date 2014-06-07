@@ -17,3 +17,13 @@
     </form>
 
 {% endblock %}
+
+{% block bootstrap3_extra_script %}
+    <script src="{{ STATIC_URL }}js/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $("#id_cpf").mask("999.999.999-99");
+        });
+    </script>
+{% endblock %}

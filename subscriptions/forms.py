@@ -3,7 +3,7 @@ from django import forms
 from django.utils.translation import ugettext as _
 from django.core.exceptions import ValidationError
 from subscriptions.models import Subscription
-
+from localflavor.br.forms import BRCPFField
 
 
 def CPFValidator(value):
@@ -15,6 +15,8 @@ def CPFValidator(value):
 
 
 class SubscriptionForm(forms.ModelForm):
+    cpf = BRCPFField(label=_('CPF'))
+
     class Meta:
         model = Subscription
         exclude = ('paid', )
@@ -22,4 +24,5 @@ class SubscriptionForm(forms.ModelForm):
     def __init__(self, *args, **kargs):
         super(SubscriptionForm, self).__init__(*args, **kargs)
 
-        self.fields['cpf'].validators.append(CPFValidator)
+        # self.fields['cpf'] = BRCPFField(label=_('CPF'))
+        #self.fields['cpf'].validators.append(CPFValidator)
