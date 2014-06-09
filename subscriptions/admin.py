@@ -5,7 +5,6 @@ from django.utils.translation import ungettext, ugettext as _
 from django.contrib import admin
 from subscriptions.models import Subscription
 from subscriptions.forms import SubscriptionForm
-from localflavor.br.forms import BRCPFField
 
 
 class SubscriptionAdmin(admin.ModelAdmin):

@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from subscriptions.forms import SubscriptionForm
 from subscriptions.models import Subscription
-from django.http import HttpResponse
 
 
 def subscribe(request):
