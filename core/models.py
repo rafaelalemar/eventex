@@ -53,3 +53,10 @@ class Talk(models.Model):
 
     def __unicode__(self):
         return self.title
+
+
+class Course(Talk):
+    slots = models.IntegerField(_('vagas'))
+    notes = models.TextField(_(u'observações'))
+
+    objects = PeriodManager()
