@@ -1,5 +1,5 @@
 from django.contrib import admin
-from core.models import Speaker, Contact
+from core.models import Speaker, Contact, Talk
 
 
 
@@ -14,3 +14,4 @@ class SpeakerAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Speaker, SpeakerAdmin)
+admin.site.register(Talk)
