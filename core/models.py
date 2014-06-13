@@ -52,6 +52,7 @@ class Talk(models.Model):
         verbose_name = _('palestra')
         verbose_name_plural = _('palestras')
 
+    @models.permalink
     def get_absolute_url(self):
         return ('core:talk_detail', (), {'pk': self.pk})
 

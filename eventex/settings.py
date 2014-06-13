@@ -49,6 +49,7 @@ INSTALLED_APPS = (
     'bootstrap3',
     'subscriptions',
     'south',
+    'myauth',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,3 +101,13 @@ USE_TZ = True
 
 STATIC_ROOT = BASE_DIR.child('staticfiles')
 STATIC_URL = '/static/'
+
+#
+# # Controla a autenticação do Django Admin
+# AUTHENTICATION_BACKENDS = (
+#     'myauth.backends.EmailBackend',             ## autenticação por e-mail
+#     'django.contrib.auth.backends.ModelBackend' ## autenticação padrão, via username
+# )
+
+# USUÁRIO CUSTOMISADO
+AUTH_USER_MODEL='myauth.User'

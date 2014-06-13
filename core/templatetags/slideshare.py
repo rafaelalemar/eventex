@@ -3,20 +3,15 @@ from django.template import Context, Template, Node
 
 
 TEMPLATE = """
-<object id="__sse{{ id }}" width="425" height="355">
-  <param name="movie"
-    value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc={{ doc }}" />
-  <param name="allowFullScreen" value="true"/>
-  <param name="allowScriptAccess" value="always"/>
-  <embed name="__sse{{ id }}"
-    src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc={{ doc }}"
-    type="application/x-shockwave-flash"
-    allowscriptaccess="always"
-    allowfullscreen="true"
-    width="425"
-    height="355">
-  </embed>
-</object>
+<iframe src="http://www.slideshare.net/slideshow/embed_code/{{ id }}"
+        width="427"
+        height="356"
+        frameborder="0"
+        marginwidth="0"
+        marginheight="0"
+        scrolling="no"
+        allowfullscreen>
+</iframe>
 """
 
 
